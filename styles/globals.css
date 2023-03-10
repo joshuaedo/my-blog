@@ -62,4 +62,8 @@ nav a {
   body {
     margin: 0% 0%;
   }
+  nav {
+    margin-bottom: 1rem;
+    border-bottom: none;
+  }
 }
