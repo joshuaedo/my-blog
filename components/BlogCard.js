@@ -14,7 +14,8 @@ export default function BlogCard({
     <div className={styles.card}>
       <Link href={"/posts/" + slug}>
         <div className={styles.imgContainer}>
-          <Image src={coverPhoto.url} alt={title} width={250} height={250} />
+          <Image src={coverPhoto.url} alt={title} width={1000} height={1000} />
+          {/* <img src={coverPhoto.url} alt={title} /> */}
         </div>
       </Link>
       <div className={styles.text}>
