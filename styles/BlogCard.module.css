@@ -1,9 +1,16 @@
 .card {
-  margin-top: 5rem;
+  margin-top: 1rem;
   border-radius: 2rem;
   overflow: hidden;
   box-shadow: 15px 20px 40px rgba(216, 211, 211, 0.4);
+  transition: all 300ms ease-out;
 }
+
+.card:hover {
+  transition: all 300ms ease-in;
+  scale: 1.03;
+}
+
 .card h2 {
   padding: 0.5rem 0rem;
 }
@@ -13,7 +20,7 @@
 
 .imgContainer img {
   width: 100%;
-  height: 50vh;
+  height: 10rem;
 }
 
 .card img:hover {
@@ -42,6 +49,7 @@
 .author {
   display: flex;
   align-items: center;
+  font-size: 1rem;
 }
 .author img {
   width: 2rem;
