@@ -43,7 +43,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home(posts) {
+export default function Home({ posts }) {
   return (
     <>
       <Head>
@@ -63,7 +63,6 @@ export default function Home(posts) {
             slug={post.slug}
           />
         ))}
-        BlogCard
       </main>
     </>
   );
