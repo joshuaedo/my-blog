@@ -1,21 +1,10 @@
-.authdetails h6 {
-  font-weight: 500;
-}
-
-.authtext {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-}
-
-.cover {
-  width: 100%;
-  height: 30vh;
-  object-fit: cover;
-}
-
 .blog code {
   color: green;
+}
+
+.blog h2 {
+  font-size: 1.6rem !important;
+  padding-top: 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -27,5 +16,9 @@
   }
   .content img {
     width: 100%;
+  }
+  .blog h2 {
+    font-size: 1.4rem !important;
+    padding-top: 0;
   }
 }

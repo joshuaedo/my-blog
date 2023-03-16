@@ -1,7 +1,6 @@
 import styles from "@/styles/Slug.module.css";
 import { GraphQLClient, gql } from "graphql-request";
 
-
 const graphcms = new GraphQLClient(
   "https://api-eu-west-2.hygraph.com/v2/clf2r6wkc3she01ug8x5v90uv/master"
 );
@@ -61,14 +60,6 @@ export async function getStaticProps({ params }) {
 export default function BlogPost({ post }) {
   return (
     <main className={styles.blog}>
-      <div className={styles.title}>
-        <div className={styles.authdetails}>
-          <div className={styles.authtext}>
-           
-          </div>
-        </div>
-      </div>
-
       <div
         className={styles.content}
         dangerouslySetInnerHTML={{ __html: post.content.html }}

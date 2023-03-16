@@ -9,7 +9,7 @@ const graphcms = new GraphQLClient(
 
 const QUERY = gql`
   {
-    posts {
+    posts(orderBy: datePublished_DESC) {
       datePublished
       id
       slug

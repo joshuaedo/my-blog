@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "@/styles/BlogCard.module.css";
-import moment from "moment";
 
 export default function BlogCard({
   title,
@@ -11,16 +10,25 @@ export default function BlogCard({
   id,
   datePublished,
 }) {
+  function titleToTitleCase(title) {
+    return title
+      .toLowerCase()
+      .split(" ")
+      .map(function (word) {
+        return word.replace(word[0], word[0].toUpperCase());
+      })
+      .join(" ");
+  }
+
   return (
-    <div className={styles.card}>
+    <div className={styles.card} key={id}>
       <Link href={"/posts/" + slug}>
         <div className={styles.imgContainer}>
           <Image src={coverPhoto.url} alt={title} width={1000} height={1000} />
-          {/* <img src={coverPhoto.url} alt={title} /> */}
         </div>
 
         <div className={styles.text}>
-          <h3>{title}</h3>
+          <h3>{titleToTitleCase(title)}</h3>
           <div className={styles.details}>
             <div className={styles.author}>
               <Image
@@ -31,9 +39,7 @@ export default function BlogCard({
               />
               <h4>{author.name}</h4>
             </div>
-            <h6 className={styles.date}>
-              {moment(datePublished).format("MMMM d, YYYY")}
-            </h6>
+            <h6 className={styles.date}>{datePublished}</h6>
           </div>
         </div>
       </Link>

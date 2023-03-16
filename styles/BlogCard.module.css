@@ -15,8 +15,12 @@
   padding: 0.5rem 0rem;
 }
 .card h3 {
-  font-size: 1rem;
+  font-size: 1.08rem;
   text-align: center;
+}
+
+.card h6 {
+  font-weight: 200;
 }
 
 .imgContainer img {
