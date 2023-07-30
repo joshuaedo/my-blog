@@ -36,3 +36,9 @@ body {
 .bebas-neue {
   font-family: "Bebas Neue", sans-serif;
 }
+
+@media (min-width: 350px) {
+  .time {
+    display: inline;
+  }
+}
