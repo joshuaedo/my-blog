@@ -1,6 +1,6 @@
 import { GraphQLClient, gql } from "graphql-request";
 import BlogCard from "@/components/BlogCard";
-import MetaHead from "@/components/MetaHead";
+import HomeMeta from "@/components/HomeMeta";
 
 const graphcms = new GraphQLClient(
   "https://api-eu-west-2.hygraph.com/v2/clf2r6wkc3she01ug8x5v90uv/master"
@@ -43,24 +43,7 @@ export async function getStaticProps() {
 export default function Home({ posts }) {
   return (
     <>
-      <MetaHead>
-        <title>Joshua Edo • Blog</title>
-        {/* OpenGraph */}
-        <meta property="og:title" content="Joshua Edo • Blog" />
-        <meta property="og:url" content="https://blog.joshuaedo.com" />
-        <meta
-          property="og:image:url"
-          content="https://res.cloudinary.com/dnw9fplsw/image/upload/v1687950201/%3D%29.png"
-        />
-
-        {/* Twitter  */}
-        <meta name="twitter:title" content="Joshua Edo • Blog" />
-        <meta name="twitter:card" content="summary" />
-        <meta
-          name="twitter:image"
-          content="https://res.cloudinary.com/dnw9fplsw/image/upload/v1687950201/%3D%29.png"
-        />
-      </MetaHead>
+      <HomeMeta />
       <main className="pt-[22vh] pb-[9vh] px-[2%] grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {posts.map((post) => (
           <BlogCard

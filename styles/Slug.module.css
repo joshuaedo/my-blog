@@ -3,7 +3,7 @@
 }
 
 .blog h2 {
-  font-size: 3rem !important;
+  font-size: 3.8rem !important;
   font-family: "Bebas Neue", sans-serif;
 }
 
@@ -15,21 +15,24 @@
 }
 
 .content {
-  width: 60%;
+  font-size: medium;
+  width: 50%;
+  line-height: 1.7;
+  padding-bottom: 1vh;
 }
 
 @media screen and (max-width: 768px) {
   .blog {
+    padding-top: 5vh;
     margin: 0 0.5rem 0.5rem 1rem;
+    display: block;
   }
   .content {
+    font-size: small;
     width: 100%;
-  }
-  .content img {
-    width: 100%;
+    padding-bottom: 5vh;
   }
   .blog h2 {
-    font-size: 1.4rem !important;
-    padding-top: 0;
+    font-size: 2rem !important;
   }
 }
