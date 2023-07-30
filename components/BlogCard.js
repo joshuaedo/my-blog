@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 
 export default function BlogCard({
   title,
@@ -10,20 +9,10 @@ export default function BlogCard({
   id,
   datePublished,
 }) {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleHover = () => {
-    setIsHovered(!isHovered);
-  };
-
   return (
     <Link href={"/posts/" + slug}>
       <div className="relative px-[1.5rem] md:pl-[2rem]">
-        <div
-          className="flex cursor-pointer items-center justify-center"
-          onMouseEnter={handleHover}
-          onMouseLeave={handleHover}
-        >
+        <div className="flex cursor-pointer items-center justify-center">
           <div className="relative">
             <Image
               src={coverPhoto.url}
@@ -35,7 +24,7 @@ export default function BlogCard({
           </div>
         </div>
         <div className="flex items-center justify-center">
-          <p className="inline w-[233px] pt-3 text-2xl font-thin md:w-[332px] md:text-3xl">
+          <p className="bebas-neue tracking-wide inline w-[233px] pt-3 text-2xl font-medium uppercase md:w-[332px] md:text-3xl">
             {title}
           </p>
         </div>
