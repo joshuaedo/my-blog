@@ -1,6 +1,7 @@
 import styles from "@/styles/Slug.module.css";
 import { GraphQLClient, gql } from "graphql-request";
 import MetaHead from "@/components/MetaHead";
+import Image from "next/image"
 
 const graphcms = new GraphQLClient(
   "https://api-eu-west-2.hygraph.com/v2/clf2r6wkc3she01ug8x5v90uv/master"
@@ -78,13 +79,18 @@ export default function BlogPost({ post }) {
           content={post.coverPhoto.url}
         />
       </MetaHead>
-    <main className={styles.blog}>
+      <main className={styles.blog}>
        <div className={`h-[12vh]`} />
       <div
         className={styles.content}
         dangerouslySetInnerHTML={{ __html: post.content.html }}
       ></div>
-    </main>
+       <Image src={post.coverPhoto.url} alt={post.title} height={1000}
+              width={1000}
+              className="h-[320px] w-[233px] rounded-sm object-cover md:h-[280px] md:w-[280px]"/>
+
+      </main>
+    
     </>
   );
 }

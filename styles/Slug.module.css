@@ -3,8 +3,19 @@
 }
 
 .blog h2 {
-  font-size: 1.6rem !important;
-  padding-top: 1rem;
+  font-size: 3rem !important;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.blog {
+  display: flex;
+  justify-content: center;
+  padding-top: 20vh;
+  padding-bottom: 9vh;
+}
+
+.content {
+  width: 60%;
 }
 
 @media screen and (max-width: 768px) {
