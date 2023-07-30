@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <>
       <nav
-        className={`fixed z-[4] w-screen flex h-[12vh] items-center justify-between bg-opacity-50 p-7 text-lg`}
+        className={`fixed z-[4] w-screen flex h-[11vh] items-center justify-between bg-opacity-50 p-7 text-lg border-bottom`}
       >
         <div className="flex">
           <div
@@ -24,8 +24,8 @@ export default function Header() {
             <Image
               src="https://joshuaedo.sirv.com/joshuaedo/public/images/original/me-modified.png"
               alt="Joshua Edo's Logo"
-              width={25}
-              height={25}
+              width={20}
+              height={20}
             />
           </Link>
           <Link

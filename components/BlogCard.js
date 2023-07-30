@@ -10,25 +10,28 @@ export default function BlogCard({
   datePublished,
 }) {
   return (
-    <Link href={"/posts/" + slug}>
-      <div className="relative px-[1.5rem] md:pl-[2rem]">
-        <div className="flex cursor-pointer items-center justify-center">
-          <div className="relative">
+    <div className="flex justify-center pb-4">
+      <div className="border-bottom">
+        <div className="relative img-border overflow-hidden">
+          <Link href={"/posts/" + slug}>
             <Image
               src={coverPhoto.url}
               height={1000}
               width={1000}
               alt={title}
-              className="h-[320px] w-[233px]  rounded-sm object-cover md:h-[457px] md:w-[332px]"
+              className="h-[320px] w-[233px] rounded-sm object-cover md:h-[380px] md:w-[310px] hover:scale-105 transition ease-in-out"
             />
-          </div>
+            <div className="bg-[#f6f6f6] text-black stardom absolute top-4 right-6 px-4 text-lg py-1 rounded-full border border-black">
+              {author.name + ` • ` + datePublished}
+            </div>
+          </Link>
         </div>
         <div className="flex items-center justify-center">
-          <p className="bebas-neue tracking-wide inline w-[233px] pt-3 text-2xl font-medium uppercase md:w-[332px] md:text-3xl">
+          <p className="bebas-neue tracking-tight inline w-[233px] pt-4 pb-12 text-2xl font-medium uppercase md:w-[310px] md:text-3xl">
             {title}
           </p>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

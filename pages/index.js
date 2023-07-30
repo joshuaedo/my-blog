@@ -61,8 +61,7 @@ export default function Home({ posts }) {
           content="https://res.cloudinary.com/dnw9fplsw/image/upload/v1687950201/%3D%29.png"
         />
       </MetaHead>
-      <main>
-        <div className={`h-[12vh]`} />
+      <main className="pt-[22vh] pb-[9vh] px-[2%] grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {posts.map((post) => (
           <BlogCard
             title={post.title}

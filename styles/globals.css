@@ -21,6 +21,14 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
+.border-bottom {
+  border-bottom: 1px solid white;
+}
+
+.img-border {
+  border: 1px solid white;
+}
+
 .stardom {
   font-family: "Stardom", serif;
 }

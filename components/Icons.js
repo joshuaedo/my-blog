@@ -4,8 +4,8 @@ export function GithubIcon() {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="24"
-      height="24"
+      width="20"
+      height="20"
       viewBox="0 0 48 48"
       fill="white"
     >
@@ -20,8 +20,8 @@ export function TwitterIcon() {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="22"
-      height="22"
+      width="17"
+      height="17"
       viewBox="0 0 50 50"
       fill="white"
     >
@@ -36,8 +36,8 @@ export function LinkedInIcon() {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="25"
-      height="25"
+      width="20"
+      height="20"
       viewBox="0 0 50 50"
       fill="white"
     >
@@ -52,8 +52,8 @@ export function YoutubeIcon() {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="25"
-      height="25"
+      width="20"
+      height="20"
       fill="white"
       viewBox="0 0 50 50"
     >
