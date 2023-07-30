@@ -5,8 +5,7 @@ export default function Footer() {
     <div
       className={`flex h-10 items-center justify-between text-center font-normal pl-6 pr-9 pb-9 bebas-neue`}
     >
-      <p>&#169;{`` + year + ` Joshua Edo • ALL RIGHTS RESERVED`}</p>{" "}
-      <p>{wish}</p>
+      <p>&#169; {+year + ` Joshua Edo • ALL RIGHTS RESERVED`}</p> <p>{wish}</p>
     </div>
   );
 }
