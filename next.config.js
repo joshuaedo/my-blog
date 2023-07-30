@@ -6,7 +6,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   images: {
-    domains: ["media.graphassets.com"],
+    domains: ["media.graphassets.com", "joshuaedo.sirv.com"],
   },
 };
 

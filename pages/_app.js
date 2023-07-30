@@ -1,10 +1,10 @@
+import Header from "@/components/Header";
 import "@/styles/globals.css";
-import Nav from "../components/Nav";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Nav />
+      <Header />
       <Component {...pageProps} />
     </>
   );
