@@ -15,6 +15,20 @@ export default function Header() {
             <Link href="/">Joshua Edo</Link>
           </div>
         </div>
+        <div className="md:hidden cursor-pointer justify-end space-x-10 flex">
+          <Link
+            href="https://joshuaedo.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="https://joshuaedo.sirv.com/joshuaedo/public/images/original/me-modified.png"
+              alt="Joshua Edo's Logo"
+              width={20}
+              height={20}
+            />
+          </Link>
+        </div>
         <div className={`md:flex cursor-pointer justify-end space-x-10 hidden`}>
           <Link
             href="https://joshuaedo.com"
