@@ -84,7 +84,7 @@ export default function BlogPost({ post }) {
     <>
       <SlugMeta />
       <main className={styles.blog}>
-       <div className={`h-[12vh]`} />
+       <div className="h-[12vh]" />
       <div
         className={styles.content}
         dangerouslySetInnerHTML={{ __html: post.content.html }}
