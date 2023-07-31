@@ -66,7 +66,7 @@ export default function BlogPost({ post }) {
       <MetaHead>
         <title>{post.title}</title>
         {/* OpenGraph */}
-        <meta property="og:title" content="Joshua Edo • Blog" />
+        <meta property="og:title" content={post.title} />
         <meta
           property="og:url"
           content={`https://blog.joshuaedo.com/posts/${post.slug}`}

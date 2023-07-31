@@ -21,7 +21,7 @@ export default function BlogCard({
               alt={title}
               className="h-[320px] w-[233px] rounded-sm object-cover md:h-[380px] md:w-[310px] hover:scale-105 transition ease-in-out"
             />
-            <div className="bg-[#f6f6f6] text-black stardom absolute top-4 right-6 px-4 text-lg py-1 rounded-full border border-black">
+            <div className="bg-[#f6f6f6] text-black stardom absolute top-3 md:top-4 right-3 md:right-6 px-3 md:px-4 md:text-lg py-1 rounded-full border border-black text-sm">
               {author.name + ` • ` + datePublished}
             </div>
           </Link>
