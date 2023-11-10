@@ -3,12 +3,12 @@ import BlogCard from "@/components/BlogCard";
 import HomeMeta from "@/components/HomeMeta";
 
 const graphcms = new GraphQLClient(
-  "https://api-eu-west-2.hygraph.com/v2/clf2r6wkc3she01ug8x5v90uv/master"
+  "https://api-eu-west-2.hygraph.com/v2/clf2r6wkc3she01ug8x5v90uv/master",
 );
 
 const QUERY = gql`
   {
-    posts(orderBy: datePublished_DESC) {
+    posts(last: 100, orderBy: datePublished_DESC) {
       datePublished
       id
       slug
