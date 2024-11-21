@@ -5,7 +5,7 @@ import { GithubIcon, LinkedInIcon, TwitterIcon, YoutubeIcon } from './Icons';
 export default function Header() {
   return (
     <>
-      <nav className='fixed z-[4] w-full flex items-center justify-between bg-opacity-50 py-4 md:py-6 px-3 text-lg border-bottom'>
+      <nav className='fixed z-[4] w-full flex items-center justify-between bg-opacity-50 py-4 md:py-6 px-3 text-lg border-bottom max-h-[11vh]'>
         <div className='flex'>
           <div className='mr-[14vh] flex cursor-pointer items-center font-medium text-sm md:text-base'>
             <Link href='/'>Joshua Edo</Link>
