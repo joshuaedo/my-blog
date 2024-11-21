@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from '@/components/Image';
 import { GithubIcon, LinkedInIcon, TwitterIcon, YoutubeIcon } from './Icons';
 
 export default function Header() {

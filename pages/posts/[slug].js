@@ -1,6 +1,6 @@
 import styles from '@/styles/Slug.module.css';
 import { GraphQLClient, gql } from 'graphql-request';
-import Image from 'next/image';
+import Image from '@/components/Image';
 import MetaHead from '@/components/MetaHead';
 
 const graphcms = new GraphQLClient(
@@ -66,7 +66,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function BlogPost({ post }) {
-  console.log(post);
+  // console.log(post);
   const SlugMeta = () => {
     return (
       <MetaHead>

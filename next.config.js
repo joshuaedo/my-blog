@@ -9,3 +9,5 @@ const nextConfig = {
     domains: ['media.graphassets.com', 'joshuaedo.sirv.com'],
   },
 };
+
+module.exports = nextConfig;
