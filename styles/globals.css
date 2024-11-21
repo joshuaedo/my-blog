@@ -10,15 +10,9 @@
   background-color: #191919;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-  display: none;
-}
-
 body {
-  font-family: "General Sans", sans-serif;
+  font-family: 'General Sans', sans-serif;
   -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 }
 
 .border-bottom {
@@ -30,15 +24,41 @@ body {
 }
 
 .stardom {
-  font-family: "Stardom", serif;
+  font-family: 'Stardom', serif;
 }
 
 .bebas-neue {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 @media (min-width: 350px) {
   .time {
     display: inline;
   }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }

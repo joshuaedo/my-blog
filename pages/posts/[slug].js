@@ -1,10 +1,11 @@
-import styles from "@/styles/Slug.module.css";
-import { GraphQLClient, gql } from "graphql-request";
-import Image from "next/image"
-import MetaHead from "@/components/MetaHead";
+import styles from '@/styles/Slug.module.css';
+import { GraphQLClient, gql } from 'graphql-request';
+import Image from 'next/image';
+import MetaHead from '@/components/MetaHead';
 
 const graphcms = new GraphQLClient(
-  "https://api-eu-west-2.hygraph.com/v2/clf2r6wkc3she01ug8x5v90uv/master"
+  'https://api-eu-west-2.hygraph.com/v2/clf2r6wkc3she01ug8x5v90uv/master',
+  { timeout: 10000 } // 10 seconds
 );
 
 const QUERY = gql`
@@ -40,11 +41,16 @@ const SLUGLIST = gql`
 `;
 
 export async function getStaticPaths() {
-  const { posts } = await graphcms.request(SLUGLIST);
-  return {
-    paths: posts.map((post) => ({ params: { slug: post.slug } })),
-    fallback: false,
-  };
+  try {
+    const { posts } = await graphcms.request(SLUGLIST);
+    return {
+      paths: posts.map((post) => ({ params: { slug: post.slug } })),
+      fallback: 'blocking', // Enable dynamic rendering for missing paths
+    };
+  } catch (error) {
+    console.error('Failed to fetch posts:', error);
+    return { paths: [], fallback: 'blocking' };
+  }
 }
 
 export async function getStaticProps({ params }) {
@@ -60,37 +66,42 @@ export async function getStaticProps({ params }) {
 }
 
 export default function BlogPost({ post }) {
-
+  console.log(post);
   const SlugMeta = () => {
     return (
       <MetaHead>
         <title>{post.title}</title>
         {/* OpenGraph */}
-        <meta property="og:title" content={post.title} />
+        <meta property='og:title' content={post.title} />
         <meta
-          property="og:url"
+          property='og:url'
           content={`https://blog.joshuaedo.com/posts/${post.slug}`}
         />
-        <meta property="og:image:url" content={post.coverPhoto.url} />
+        <meta property='og:image:url' content={post.coverPhoto.url} />
         {/* Twitter  */}
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={post.coverPhoto.url} />
+        <meta name='twitter:title' content={post.title} />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:image' content={post.coverPhoto.url} />
       </MetaHead>
     );
-  }
+  };
 
   return (
     <>
       <SlugMeta />
       <main className={styles.blog}>
-       <div className="h-[12vh]" />
-      <div
-        className={styles.content}
-        dangerouslySetInnerHTML={{ __html: post.content.html }}
-      />
-       <Image src={post.coverPhoto.url} alt={post.title} height={1000} width={1000}
-          className="h-[200px] w-[200px] rounded-sm object-cover md:h-[280px] md:w-[280px] m-0 md:m-5"/>
+        <div className='h-[12vh]' />
+        <div
+          className={styles.content}
+          dangerouslySetInnerHTML={{ __html: post.content.html }}
+        />
+        <Image
+          src={post.coverPhoto.url}
+          alt={post.title}
+          height={1000}
+          width={1000}
+          className='h-[200px] w-[200px] rounded-sm object-cover md:h-[280px] md:w-[280px] m-0 md:m-5'
+        />
       </main>
     </>
   );

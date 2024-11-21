@@ -6,8 +6,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   images: {
-    domains: ["media.graphassets.com", "joshuaedo.sirv.com"],
+    domains: ['media.graphassets.com', 'joshuaedo.sirv.com'],
   },
+  staticPageGenerationTimeout: 60, // Increase to 60 seconds or more,
 };
-
-module.exports = nextConfig;

@@ -1,9 +1,9 @@
-import { GraphQLClient, gql } from "graphql-request";
-import BlogCard from "@/components/BlogCard";
-import HomeMeta from "@/components/HomeMeta";
+import { GraphQLClient, gql } from 'graphql-request';
+import BlogCard from '@/components/BlogCard';
+import HomeMeta from '@/components/HomeMeta';
 
 const graphcms = new GraphQLClient(
-  "https://api-eu-west-2.hygraph.com/v2/clf2r6wkc3she01ug8x5v90uv/master",
+  'https://api-eu-west-2.hygraph.com/v2/clf2r6wkc3she01ug8x5v90uv/master'
 );
 
 const QUERY = gql`
@@ -44,7 +44,7 @@ export default function Home({ posts }) {
   return (
     <>
       <HomeMeta />
-      <main className="pt-[22vh] pb-[9vh] px-[2%] grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <main className='pt-24 md:pt-32 pb-20 px-[2%] gap-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
         {posts.map((post) => (
           <BlogCard
             title={post.title}
